@@ -17,7 +17,6 @@ class AppTest < MiniTest::Test
 
     it "sets the relations ids correctly even when overwriting the relationship with the same value" do
       @a.bs = [@b]
-      @a.bs = [@b]
       @a.reload.b_ids.must_equal [@b.id]
       @b.reload.a_ids.must_equal [@a.id]
 
