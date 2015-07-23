@@ -8,12 +8,12 @@ class App
 
   class A
       include Mongoid::Document
-      has_and_belongs_to_many :bs
+      has_and_belongs_to_many :bs, inverse_of: :as
   end
 
   class B
       include Mongoid::Document
-      has_and_belongs_to_many :as
+      has_and_belongs_to_many :as, inverse_of: :bs
   end
 end
 
